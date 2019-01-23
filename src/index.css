@@ -1,3 +1,8 @@
+html{
+  height: 100%;
+  margin: 0;
+}
+
 @font-face{
   font-family: Deathrattle;
   src: url('./assets/fonts/deathrattlebb_reg.ttf');
@@ -9,7 +14,7 @@ body {
   font-family: Deathrattle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
+  background-color: #383838;
   color: #fc58fc;
 }
 
@@ -20,28 +25,24 @@ h1{
   font-size: 6em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-
 img{
   max-width: 100%;
 }
 
 .thumbnail>img{
-  height: 360px;
+  /* height: 250px; */
   object-fit: contain;
   width: 100%;
+  box-shadow: 5px 5px 25px 0 rgba(0,0,0,0.07);
 }
 
 .thumbnail{
-  margin: 10px auto;
+  margin: 15px auto;
   width: 100%;
-  padding: 0 !important;
-  display: flex;
+  padding: 1px !important;
+  /* display: flex; */
 }
+
 
 .modal {
   display: none; /* Hidden by default */
@@ -109,6 +110,10 @@ img{
 @media only screen and (max-width: 768px){
   .thumbnail>img{
     height: 400px;
+  }
+
+  br{
+    display: none
   }
 
   h1{
