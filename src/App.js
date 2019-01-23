@@ -23,22 +23,17 @@ class App extends Component {
   componentWillMount(){
     let doodles = []
 
-    for(let i = 1; i <= 19; i++){
+    for(let i = 1; i <= 11; i++){
         doodles[i] = `./assets/doodles/${i}.jpg`
     }
-    this.setState({doodles})
-    
-    setInterval(() => {
-      let i = Math.floor((Math.random() * 19) + 1)
-      document.body.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)),' + 'url(' + require(`./assets/doodles/${i}.jpg`) + ')'
-    },3000)
+    this.setState({doodles})  
   }
 
   render() {
     const { doodles } = this.state
     return (
       <div className="App">
-      <h1>Delic Doodles</h1>
+      <h1>Delic Doodles</h1> <br/>
         <div className="container">
           <div className="row"> 
             {doodles.map((doodle, index) => (   
