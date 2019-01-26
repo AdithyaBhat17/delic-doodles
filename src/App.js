@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FlowerSpinner } from'react-epic-spinners'
+import ProgressiveImage from 'react-progressive-image'
 
 class App extends Component {
   state = {
@@ -31,6 +33,11 @@ class App extends Component {
 
   render() {
     const { doodles } = this.state
+
+    const placeholder = (
+      <FlowerSpinner color="#fc58fc" className="spinner"/>
+    )
+    
     return (
       <div className="App">
       <h1>Delic Doodles</h1> <br/>
@@ -39,7 +46,10 @@ class App extends Component {
             {doodles.map((doodle, index) => (   
               <div key={index} className="col-md-3 col-sm-12">
                 <div className="thumbnail">
-                  <img onClick={() => this.handleClick(index)} className="doodle-img" id={index} src={require(`${doodle}`)} alt=""/>
+                  <ProgressiveImage src={require(`${doodle}`)} placeholder="">
+                    {(src, loading) => (loading ? placeholder : 
+                    <img onClick={() => this.handleClick(index)} className="doodle-img" id={index} src={src} alt=""/>)}
+                  </ProgressiveImage>
                 </div>
               </div>       
             ))}
