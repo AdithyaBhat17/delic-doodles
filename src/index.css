@@ -32,6 +32,10 @@ img{
   max-width: 100%;
 }
 
+.spinner{
+  margin : 25vh auto;
+}
+
 .thumbnail>img{
   /* height: 250px; */
   object-fit: contain;
