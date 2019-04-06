@@ -14,15 +14,15 @@ body {
   font-family: Deathrattle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #383838;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./assets/background.jpg');
+  background-color: #fff;
   background-attachment: fixed;
-  color: #fc58fc;
+  color: rgb(60, 57, 61);
 }
 
 h1{
   font-weight: bold;
   text-align: center;
+  letter-spacing: 5px;
   margin: 25px auto -20px;
   font-size: 6em;
   text-shadow: 3px 4px #000 ;
@@ -40,12 +40,14 @@ img{
   /* height: 250px; */
   object-fit: contain;
   width: 100%;
+  border-radius: 10px;
   box-shadow: 5px 5px 25px 0 rgba(0,0,0,0.07);
 }
 
 .thumbnail{
   margin: 15px auto;
   width: 100%;
+  border-radius: 10px;
   padding: 1px !important;
   /* display: flex; */
 }
@@ -125,6 +127,7 @@ img{
 
   h1{
     font-size: 4em;
+    letter-spacing: 3px;
     margin-bottom: 10px;
   }
 
