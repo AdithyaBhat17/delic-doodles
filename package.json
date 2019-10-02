@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.10.1",
     "react-epic-spinners": "^0.2.1",
     "react-progressive-image": "^0.6.0",
     "react-scripts": "2.1.3"
